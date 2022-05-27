@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 group = "io.github.snowbldr.ktor"
 description = "Package based routing for Ktor"
-version = "1.0.0"
+version = "1.0.1"
 plugins {
     kotlin("jvm") version "1.6.20"
     `java-library`
@@ -28,6 +28,8 @@ dependencies {
 java {
     withJavadocJar()
     withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 tasks.register("lint") {

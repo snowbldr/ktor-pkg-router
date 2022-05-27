@@ -21,7 +21,7 @@ First install the dependency
 Gradle kotlin:
 
 ```kotlin
-implementation("io.github.snowbldr.ktor:ktor-pkg-router:1.0.0")
+implementation("io.github.snowbldr.ktor:ktor-pkg-router:1.0.1")
 ```
 
 Maven:
@@ -31,7 +31,7 @@ Maven:
 <dependency>
     <groupId>io.github.snowbldr.ktor</groupId>
     <artifactId>ktor-pkg-router</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
