@@ -141,26 +141,26 @@ class index(private val app: Application) : KtorRoute {
 
 ## Path Parameters
 
-Single parameters are supported by prefixing the name of the class with a `$` (i.e. $userId.kt)
+Single parameters are supported by prefixing the name of the class with a `$` (i.e. $userId)
 
 - src/main/kotlin
     - com.mycompany.myapp
         - www
             - users
-                - $userId.kt
+                - $userId
 
-`www.users.$userId` maps to the path `/users/{userId}` in your ktor app
+The class `www.users.$userId` maps to the path `/users/{userId}` in your ktor app
 
 ## CatchAll
 
-Catchall paths are supported by suffixing the name of the class with a `_` (i.e. catch_.kt)
+Catchall paths are supported by suffixing the name of the class with a `_` (i.e. catch_)
 
 - src/main/kotlin
     - com.mycompany.myapp
         - www
-            - images_.kt
+            - images_
 
-`www.images_.kt` maps to the path `/images*path` in your Kotlin app.
+The class `www.images_` maps to the path `/images{restPath...}` in your Kotlin app.
 
 The remainder of the path is always set to the variable name `restPath` and is accessible via `call.parameters.getAll("restPath")` in
 the handler.
